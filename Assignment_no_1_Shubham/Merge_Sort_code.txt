@@ -1,0 +1,17 @@
+import pandas as pd
+import time
+start_time=time.time()
+df = pd.read_csv("C:\\Users\\dell\\Downloads\\data\\Sales_Records.csv")
+
+#i am using panda api for sorting column 'Units Sold'
+Merge_Sort = df.sort_values(by='Units Sold',kind = 'mergesort')
+Sold = Merge_Sort['Units Sold']
+print(Sold)
+End_time=time.time()
+Execution_time =End_time-start_time
+print("Total Execution time in seconds: ", Execution_time)
+
+
+
+Output: 
+Total Execution time in seconds:  2.652735471725464

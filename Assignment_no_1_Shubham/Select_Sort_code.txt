@@ -1,0 +1,39 @@
+#import pandas as pd
+#df = pd.read_csv("C:\\Users\\dell\\Downloads\\data\\Sales_Records.csv")
+#Sold = df['Units Sold']
+
+def sort(nums):
+    for i in range(5):
+        minpos = i
+        for j in range(i,6):
+            if nums[j]<nums[minpos]:
+                minpos = j
+                
+        temp = nums[i]
+        nums[i] = nums[minpos]
+        nums[minpos] = temp
+               
+                
+nums = [5,3,8,6,7,2]                
+sort(nums)
+print(nums)
+
+Output:
+[2, 3, 5, 6, 7, 8]
+
+
+#############################################
+
+Dataframe data formate didn't work with above code need to find some other solution still working on it.
+
+
+C:\Users\dell\Anaconda3\lib\site-packages\ipykernel_launcher.py:12: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  if sys.path[0] == '':
+C:\Users\dell\Anaconda3\lib\site-packages\ipykernel_launcher.py:13: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  del sys.path[0]
